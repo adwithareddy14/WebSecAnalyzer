@@ -5,7 +5,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "WebVulnX"
     VERSION: str = "2.0.0"
     API_V1_STR: str = "/api"
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./webvulnx.db")
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:////tmp/webvulnx.db")
     DEFAULT_TIMEOUT: int = 10
     MAX_REDIRECTS: int = 10
     USER_AGENT: str = "WebVulnX/2.0 (Ethical Web Application Security Assessment Platform)"
