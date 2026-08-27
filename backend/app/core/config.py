@@ -1,4 +1,3 @@
-import os
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -7,10 +6,7 @@ class Settings(BaseSettings):
     VERSION: str = "2.0.0"
     API_V1_STR: str = "/api"
 
-    DATABASE_URL: str = os.getenv(
-        "DATABASE_URL",
-        "sqlite:////tmp/webvulnx.db"
-    )
+    DATABASE_URL: str = "sqlite:///./webvulnx.db"
 
     DEFAULT_TIMEOUT: int = 10
     MAX_REDIRECTS: int = 10

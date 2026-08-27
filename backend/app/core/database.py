@@ -1,14 +1,7 @@
-import os
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 from app.core.config import settings
-
-
-# Ensure the temporary database directory exists.
-if settings.DATABASE_URL.startswith("sqlite:////tmp/"):
-    os.makedirs("/tmp", exist_ok=True)
 
 
 engine = create_engine(
